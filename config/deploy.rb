@@ -12,7 +12,7 @@ require 'mina/git'
 
 set :domain, 'photos.ygamretuta.xyz'
 set :deploy_to, '/home/ygamretuta/webapps/photos'
-set :repository, 'git://...'
+set :repository, 'git@github.com:ygamretuta/photos.git'
 set :branch, 'master'
 
 # For system-wide RVM install.

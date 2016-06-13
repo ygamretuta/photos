@@ -120,6 +120,7 @@ build/
 
 .DS_store
 config/database.yml
+config/secrets.yml
 
 # Windows image file caches
 Thumbs.db
