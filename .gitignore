@@ -126,6 +126,13 @@ config/secrets.yml
 Thumbs.db
 ehthumbs.db
 
+# Capistrano
+Capfile
+bin/cap
+bin/capify
+config/deploy.rb
+config/deploy/
+
 # Folder config file
 Desktop.ini
 

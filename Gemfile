@@ -50,9 +50,6 @@ gem 'font-awesome-rails'
 # Bower Rails for vendor JS
 gem 'bower-rails', '~> 0.10.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -70,7 +67,7 @@ group :development do
   # Annotate to see AR fields on model files
   gem 'annotate'
   # Mina for deployment; Read more: https://github.com/mina-deploy/mina
-  gem 'mina'
+  gem 'capistrano-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
