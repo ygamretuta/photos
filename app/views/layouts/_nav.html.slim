@@ -1,0 +1,24 @@
+nav class="navbar navbar-fixed-top navbar-light bg-faded"
+  a class="navbar-brand" href="/images"
+    |Ygam Retuta
+
+  ul.nav.navbar-nav
+    li.nav-item.active
+      a.nav-link href="#"
+        | Home
+        span.sr-only (current)
+    li.nav-item
+      a.nav-link href="#"  Fashion
+    li.nav-item
+      a.nav-link href="#"  Street
+    li.nav-item
+      a.nav-link href="#"  Wedding
+    li.nav-item
+      a.nav-link href="#"  Food
+    li.nav-item
+      a.nav-link href="#"  Portraits
+    li.nav-item
+      a.nav-link href="#"  Events
+    - if user_signed_in?
+      li.nav-item
+        = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'

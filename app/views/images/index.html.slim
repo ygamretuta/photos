@@ -1,0 +1,11 @@
+#grid
+  .grid-sizer
+  - @images.each do |img|
+    div class=("grid-item #{'highlight' if img.highlight?}") 
+      .photo-close-cont.clearfix
+        = link_to img, method: :delete, class: 'photo-link' do
+          = fa_icon 'times'
+        = link_to edit_image_path(img), class: 'photo-link' do
+          = fa_icon 'pencil'
+      = link_to image_tag(img.path_url(:standard), class: 'img-fluid'), serve_image_url(img), title: img.description, class: 'link-img', target:'_blank', remote: true
+

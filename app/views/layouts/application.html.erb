@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= page_title %></title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+
+  <body class="<%= body_class %>">
+    <% if notice %>
+      <div class="alert alert-info" role="alert">
+        <strong>Heads up!</strong> <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong> <%= alert %>
+      </div>
+    <% end %>
+
+    <%= render 'layouts/nav' %>
+
+    <%= yield %>
+  </body>
+</html>

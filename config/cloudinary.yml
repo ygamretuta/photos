@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ygamretuta
+  api_key: '878752522758698'
+  api_secret: SY3g3FR1EZkuLOXhn7LWPEq06Jo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ygamretuta
+  api_key: '878752522758698'
+  api_secret: SY3g3FR1EZkuLOXhn7LWPEq06Jo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ygamretuta
+  api_key: '878752522758698'
+  api_secret: SY3g3FR1EZkuLOXhn7LWPEq06Jo
+  enhance_image_tag: true
+  static_image_support: false

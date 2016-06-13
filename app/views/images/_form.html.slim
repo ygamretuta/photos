@@ -1,0 +1,22 @@
+= form_for @image do |f|
+  = f.hidden_field :path_cache
+
+  - if f.object.id.present?
+    .form-group
+      = image_tag f.object.path_url(:standard), height: 200
+  - else
+    fieldset class="form-group"
+      = f.label :path
+      = f.file_field :path, class: 'form-control'
+
+  fieldset class="form-group"
+    = f.label :description
+    = f.text_area :description, class: 'form-control', maxlength: 140
+
+  fieldset class="form-group"
+    label class="c-input c-checkbox"
+      = f.check_box :highlight
+      span class="c-indicator"
+      | Highlight?
+
+  = f.submit 'Process', class: 'btn btn-primary', data: {'disable-with' => 'Processing...'}

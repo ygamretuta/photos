@@ -1,0 +1,113 @@
+// Place all the styles related to the Images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.photo{
+  position: relative;
+  float:left;
+  height: auto;
+
+  img{
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.photo.highlight{
+  // width: 50%;
+}
+
+.photo-close-cont{
+  position: absolute;
+  right: 10px;
+}
+
+.photo-link{
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  color: #CCC;
+}
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 20%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+#imagelightbox
+{
+  position: fixed;
+  z-index: 9999;
+
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.mfp-title{
+  font-size: 13px;
+}
+
+
+
+// Extra small devices (portrait phones, less than 34em)
+@include media-breakpoint-up(xs) {
+  .grid-sizer, .grid-item{width: 100%;}
+}
+
+// Small devices (landscape phones, 34em and up)
+@include media-breakpoint-up(sm) {
+  .grid-sizer, .grid-item{width: 25%;}
+}
+
+// Medium devices (tablets, 48em and up)
+@include media-breakpoint-up(md) {
+  .grid-sizer, .grid-item{width: 20%;}
+}
+
+// Large devices (desktops, 62em and up)
+@include media-breakpoint-up(lg) {
+  .grid-sizer, .grid-item{width: 20%;}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@include media-breakpoint-up(xl) {
+  .grid-item{width: 20%;}
+}
