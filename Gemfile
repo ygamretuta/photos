@@ -66,9 +66,13 @@ group :development do
   gem 'quiet_assets'
   # Annotate to see AR fields on model files
   gem 'annotate'
-  # Mina for deployment; Read more: https://github.com/mina-deploy/mina
-  gem 'capistrano-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby '2.3.0'
