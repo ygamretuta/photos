@@ -119,7 +119,7 @@ build/
 .rvmrc
 
 .DS_store
-config/database.yml
+# config/database.yml
 config/secrets.yml
 
 # Windows image file caches
