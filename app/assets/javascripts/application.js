@@ -16,8 +16,5 @@
 //= require bootstrap
 //= require masonry/imagesloaded.pkgd.min
 //= require masonry/masonry.pkgd.min
-//= require jquery.magnific-popup.min
-//= require jquery.history
-//= require magnific-popup-history
-//= require magnific-popup-open-item
+//= require select2
 //= require_tree .

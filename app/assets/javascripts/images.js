@@ -8,21 +8,12 @@ function ready(){
   // layout Isotope after each image loads
   $grid.imagesLoaded().progress( function() {
     $grid.masonry();
+  });
 
-    $grid.magnificPopup({
-      delegate: 'a.link-img',
-      type: 'image',
-      tLoading: 'Loading image #%curr%...',
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true
-      },
-      image: {
-        titleSrc: function(item) {
-          return item.el.attr('title');
-        }
-      }
-    });
+  $('.tags').select2({
+    tags: true,
+    tokenSeparators: [',', ' '],
+    maximumSelectionLength: 5
   });
 }
 

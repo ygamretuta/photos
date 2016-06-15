@@ -1,9 +1,11 @@
 class ImagesController < ApplicationController
   before_action :set_image, only:[:show, :edit, :update, :destroy, :serve]
 
+  before_action :authenticate_user!, except: [:index, :show]
+
   layout proc {|controller| controller.request.xhr? ? false: 'application' }
 
-  respond_to :html, :webp, :js
+  respond_to :html, :js
 
   def index
     @images = Image.all
@@ -63,6 +65,6 @@ class ImagesController < ApplicationController
     end
 
     def image_params
-      params.require(:image).permit(:path, :description, :highlight, :path_cache)
+      params.require(:image).permit(:path, :description, :highlight, :path_cache, :title, tag_list: [])
     end
 end

@@ -47,8 +47,10 @@ gem 'masonry-rails', github: 'ygamretuta/masonry-rails'
 gem 'devise'
 # Fontawesome for icons; Read more: https://github.com/bokmann/font-awesome-rails
 gem 'font-awesome-rails'
-# Bower Rails for vendor JS
-gem 'bower-rails', '~> 0.10.0'
+# ActsAsTaggable for categorization
+gem 'acts-as-taggable-on', github: 'ygamretuta/acts-as-taggable-on'
+# Select2 for tagging form
+gem 'select2-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

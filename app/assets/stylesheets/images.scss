@@ -85,6 +85,16 @@ body { font-family: sans-serif; }
   font-size: 13px;
 }
 
+.container-show{
+  max-width:960px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
 
 
 // Extra small devices (portrait phones, less than 34em)

@@ -1,3 +1,6 @@
+- @image.errors.full_messages.each do |msg|
+  li= msg
+
 = form_for @image do |f|
   = f.hidden_field :path_cache
 
@@ -10,8 +13,16 @@
       = f.file_field :path, class: 'form-control'
 
   fieldset class="form-group"
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+
+  fieldset class="form-group"
     = f.label :description
     = f.text_area :description, class: 'form-control', maxlength: 140
+
+  fieldset class="form-group"
+    = f.label :tags
+    = f.select :tag_list, f.object.tag_list + ActsAsTaggableOn::Tag.most_used(10), {},  multiple: true, class: 'tags dropdown form-control'
 
   fieldset class="form-group"
     label class="c-input c-checkbox"

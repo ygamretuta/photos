@@ -1,3 +1,14 @@
 <%#= cl_image_tag(@image.path.full_public_id, width: 300, height: 200) %>
-<%= image_tag @image.path_url(:standard), class: 'img-fluid' %>
-<p><%= @image.description %></p>
+
+<div class="container-show">
+  <h1><%= @image.title %></h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <%= image_tag @image.path_url(:standard), class: 'img-fluid' %>
+    </div>
+
+    <div class="col-sm-4">
+      <p><%= @image.description %></p>
+    </div>
+  </div>
+</div>

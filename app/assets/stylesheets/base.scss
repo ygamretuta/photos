@@ -1,8 +1,44 @@
 html,
 body {
   height: 100%;
+  background-color: #fefefe;
 }
 
 body{
   padding-top: 55px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+
+p{
+  font-size: 20px;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+// Extra small devices (portrait phones, less than 34em)
+@include media-breakpoint-up(xs) {
+  p{padding: 10px;}
+}
+
+// Small devices (landscape phones, 34em and up)
+@include media-breakpoint-up(sm) {
+  p{padding: 0;}
+}
+
+// Medium devices (tablets, 48em and up)
+@include media-breakpoint-up(md) {
+  p{padding: 0;}
+}
+
+// Large devices (desktops, 62em and up)
+@include media-breakpoint-up(lg) {
+  p{padding: 0;}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@include media-breakpoint-up(xl) {
+  p{padding: 0;}
 }

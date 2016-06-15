@@ -8,6 +8,8 @@
 #  category_id :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  highlight   :boolean          default(FALSE)
+#  title       :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
