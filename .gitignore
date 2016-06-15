@@ -26,7 +26,6 @@
 /public/cache
 /public/stylesheets/compiled
 /public/system/*
-/public/assets/*
 /public/sitemaps
 /spec/tmp/*
 /cache
