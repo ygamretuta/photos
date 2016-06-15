@@ -87,5 +87,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Heroku
-  # config.assets.initialize_on_precompile = false
+  config.assets.initialize_on_precompile = false
 end
