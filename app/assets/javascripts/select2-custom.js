@@ -722,7 +722,7 @@
             "&": "&amp;",
             "<": "&lt;",
             ">": "&gt;",
-            "": "&quot;",
+            "\"": "&quot;",
             "\"": "&#39;",
             "/": "&#47;"
           };
@@ -773,7 +773,7 @@
 
         Results.prototype.render = function () {
           var $results = $(
-            "<ul class="select2-results__options" role="tree"></ul>"
+            "<ul class=\"select2-results__options\" role=\"tree\"></ul>"
           );
 
           if (this.options.get("multiple")) {
@@ -796,8 +796,7 @@
           this.hideLoading();
 
           var $message = $(
-            "<li role="treeitem" aria-live="assertive"" +
-            " class="select2-results__option"></li>"
+            "<li role=\"treeitem\" aria-live=\"assertive\" class=\"select2-results__option\"></li>"
           );
 
           var message = this.options.get("translations").get(params.message);
@@ -1323,8 +1322,8 @@
 
         BaseSelection.prototype.render = function () {
           var $selection = $(
-            "<span class="select2-selection" role="combobox" " +
-            " aria-haspopup="true" aria-expanded="false">" +
+            "<span class=\"select2-selection\" role=\"combobox\" " +
+            " aria-haspopup=\"true\" aria-expanded=\"false\">" +
             "</span>"
           );
 
@@ -1484,9 +1483,9 @@
           $selection.addClass("select2-selection--single");
 
           $selection.html(
-            "<span class="select2-selection__rendered"></span>" +
-            "<span class="select2-selection__arrow" role="presentation">" +
-            "<b role="presentation"></b>" +
+            "<span class=\"select2-selection__rendered\"></span>" +
+            "<span class=\"select2-selection__arrow\" role=\"presentation\">" +
+            "<b role=\"presentation\"></b>" +
             "</span>"
           );
 
@@ -1583,7 +1582,7 @@
           $selection.addClass("select2-selection--multiple");
 
           $selection.html(
-            "<ul class="select2-selection__rendered"></ul>"
+            "<ul class=\"select2-selection__rendered\"></ul>"
           );
 
           return $selection;
@@ -1635,8 +1634,8 @@
 
         MultipleSelection.prototype.selectionContainer = function () {
           var $container = $(
-            "<li class="select2-selection__choice">" +
-            "<span class="select2-selection__choice__remove" role="presentation">" +
+            "<li class=\"select2-selection__choice\">" +
+            "<span class=\"select2-selection__choice__remove\" role=\"presentation\">" +
             "&times;" +
             "</span>" +
             "</li>"
@@ -1812,7 +1811,7 @@
           }
 
           var $remove = $(
-            "<span class="select2-selection__clear">" +
+            "<span class=\"select2-selection__clear\">" +
             "&times;" +
             "</span>"
           );
@@ -1835,10 +1834,10 @@
 
         Search.prototype.render = function (decorated) {
           var $search = $(
-            "<li class="select2-search select2-search--inline">" +
-            "<input class="select2-search__field" type="search" tabindex="-1"" +
-            " autocomplete="off" autocorrect="off" autocapitalize="off"" +
-            " spellcheck="false" role="textbox" aria-autocomplete="list" />" +
+            "<li class=\"select2-search select2-search--inline\">" +
+            "<input class=\"select2-search__field\" type=\"search\" tabindex=\"-1\"" +
+            " autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\"" +
+            " spellcheck=\"false\" role=\"textbox\" aria-autocomplete=\"list\" />" +
             "</li>"
           );
 
@@ -3848,8 +3847,8 @@
 
         Dropdown.prototype.render = function () {
           var $dropdown = $(
-            "<span class="select2-dropdown">" +
-            "<span class="select2-results"></span>" +
+            "<span class=\"select2-dropdown\">" +
+            "<span class=\"select2-results\"></span>" +
             "</span>"
           );
 
@@ -3886,10 +3885,10 @@
           var $rendered = decorated.call(this);
 
           var $search = $(
-            "<span class="select2-search select2-search--dropdown">" +
-            "<input class="select2-search__field" type="search" tabindex="-1"" +
-            " autocomplete="off" autocorrect="off" autocapitalize="off"" +
-            " spellcheck="false" role="textbox" />" +
+            "<span class=\"select2-search select2-search--dropdown\">" +
+            "<input class=\"select2-search__field\" type=\"search\" tabindex=\"-1\"" +
+            " autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\"" +
+            " spellcheck=\"false\" role=\"textbox\" />" +
             "</span>"
           );
 
@@ -4097,8 +4096,8 @@
         InfiniteScroll.prototype.createLoadingMore = function () {
           var $option = $(
             "<li " +
-            "class="select2-results__option select2-results__option--load-more"" +
-            "role="treeitem" aria-disabled="true"></li>"
+            "class=\"select2-results__option select2-results__option--load-more\"" +
+            "role=\"treeitem\" aria-disabled=\"true\"></li>"
           );
 
           var message = this.options.get("translations").get("loadingMore");
@@ -4777,7 +4776,7 @@
                   // because of how Select2 helps load all possible translation files.
                   if (options.debug && window.console && console.warn) {
                     console.warn(
-                      "Select2: The language file for "" + name + "" could not be " +
+                      "Select2: The language file for \"" + name + "\" could not be " +
                       "automatically loaded. A fallback will be used instead."
                     );
                   }
@@ -4964,7 +4963,7 @@
             if (this.options.debug && window.console && console.warn) {
               console.warn(
                 "Select2: The `data-select2-tags` attribute has been changed to " +
-                "use the `data-data` and `data-tags="true"` attributes and will be " +
+                "use the `data-data` and `data-tags=\"true\"` attributes and will be " +
                 "removed in future versions of Select2."
               );
             }
@@ -5521,8 +5520,8 @@
         Select2.prototype.enable = function (args) {
           if (this.options.get("debug") && window.console && console.warn) {
             console.warn(
-              "Select2: The `select2("enable")` method has been deprecated and will" +
-              " be removed in later Select2 versions. Use $element.prop("disabled")" +
+              "Select2: The `select2(\"enable\")` method has been deprecated and will" +
+              " be removed in later Select2 versions. Use $element.prop(\"disabled\")" +
               " instead."
             );
           }
@@ -5540,7 +5539,7 @@
           if (this.options.get("debug") &&
             arguments.length > 0 && window.console && console.warn) {
             console.warn(
-              "Select2: Data can no longer be set using `select2("data")`. You " +
+              "Select2: Data can no longer be set using `select2(\"data\")`. You " +
               "should consider setting the value instead using `$element.val()`."
             );
           }
@@ -5557,7 +5556,7 @@
         Select2.prototype.val = function (args) {
           if (this.options.get("debug") && window.console && console.warn) {
             console.warn(
-              "Select2: The `select2("val")` method has been deprecated and will be" +
+              "Select2: The `select2(\"val\")` method has been deprecated and will be" +
               " removed in later Select2 versions. Use $element.val() instead."
             );
           }
@@ -5619,9 +5618,9 @@
 
         Select2.prototype.render = function () {
           var $container = $(
-            "<span class="select2 select2-container">" +
-            "<span class="selection"></span>" +
-            "<span class="dropdown-wrapper" aria-hidden="true"></span>" +
+            "<span class=\"select2 select2-container\">" +
+            "<span class=\"selection\"></span>" +
+            "<span class=\"dropdown-wrapper\" aria-hidden=\"true\"></span>" +
             "</span>"
           );
 
