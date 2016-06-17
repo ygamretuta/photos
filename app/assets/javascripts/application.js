@@ -16,5 +16,5 @@
 //= require bootstrap
 //= require masonry/imagesloaded.pkgd.min
 //= require masonry/masonry.pkgd.min
-//= require select2
+//= require select2-full
 //= require_tree .
